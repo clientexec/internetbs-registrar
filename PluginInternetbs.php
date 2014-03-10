@@ -328,10 +328,10 @@ class PluginInternetbs extends RegistrarPlugin implements ICanImportDomains{
 		// Step 5. Check if domain name is not valid
 		if(isset($result['status']) && isset($result['code']) && $result['code'] == '100002' && $this->_isEqStrings($result['status'], 'FAILURE'))	{
 			$status = 3;
-		} 
+		}
 
-    
-        $domains[] = array("tld"=>$params['sld'],"domain"=>$params['tld'],"status"=>$status);
+
+        $domains[] = array("tld"=>$params['tld'],"domain"=>$params['sld'],"status"=>$status);
         return array("result"=>$domains);
  	}
 
