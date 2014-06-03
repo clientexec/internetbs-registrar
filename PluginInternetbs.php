@@ -18,47 +18,47 @@ class PluginInternetbs extends RegistrarPlugin implements ICanImportDomains{
 
     function getVariables() {
         $variables = array(
-            /*T*/'Plugin Name'/*/T*/ => array (
+            lang('Plugin Name') => array (
                                 'type'          =>'hidden',
-                                'description'   =>/*T*/'How CE sees this plugin (not to be confused with the Signup Name)'/*/T*/,
-                                'value'         =>/*T*/'Internet.bs Corp.'/*/T*/
+                                'description'   =>lang('How CE sees this plugin (not to be confused with the Signup Name)'),
+                                'value'         =>lang('Internet.bs Corp.')
                                ),
 
-            /*T*/'Use testing server'/*/T*/ => array(
+            lang('Use testing server') => array(
                                 'type'          =>'yesno',
-                                'description'   =>/*T*/'Select Yes if you wish to use Internet.bs testing environment, so that transactions are not actually made.'/*/T*/,
+                                'description'   =>lang('Select Yes if you wish to use Internet.bs testing environment, so that transactions are not actually made.'),
                                 'value'         =>0
                                ),
-            /*T*/'Hide whois data'/*/T*/ => array(
+            lang('Hide whois data') => array(
                                 'type'          =>'yesno',
-                                'description'   =>/*T*/'Select Yes if you want to hide the information in the public whois for Admin/Billing/Technical contacts (.it)'/*/T*/,
+                                'description'   =>lang('Select Yes if you want to hide the information in the public whois for Admin/Billing/Technical contacts (.it)'),
                                 'value'         =>0
                                ),
 
-            /*T*/'API Key'/*/T*/ => array(
+            lang('API Key') => array(
                                 'type'          =>'text',
-                                'description'   =>/*T*/'Enter API key for your Internet.bs reseller account.'/*/T*/,
+                                'description'   =>lang('Enter API key for your Internet.bs reseller account.'),
                                 'value'         =>''
                                ),
 
-            /*T*/'Password'/*/T*/  => array(
+            lang('Password')  => array(
                                 'type'          =>'password',
-                                'description'   =>/*T*/'Enter the password for your Internet.bs reseller account.'/*/T*/,
+                                'description'   =>lang('Enter the password for your Internet.bs reseller account.'),
                                 'value'         =>'',
                                 ),
-            /*T*/'Supported Features'/*/T*/  => array(
+            lang('Supported Features')  => array(
                                 'type'          => 'label',
-                                'description'   => '* './*T*/'TLD Lookup'/*/T*/.'<br>* './*T*/'Domain Registration'/*/T*/.' <br>* './*T*/'Existing Domain Importing'/*/T*/.' <br>* './*T*/'Get / Set Auto Renew Status'/*/T*/.' <br>* './*T*/'Get / Set DNS Records'/*/T*/.' <br>* './*T*/'Get / Set Nameserver Records'/*/T*/.' <br>* './*T*/'Get / Set Contact Information'/*/T*/.' <br>\* './*T*/'Get Registrar Lock'/*/T*/,
+                                'description'   => '* '.lang('TLD Lookup').'<br>* '.lang('Domain Registration').' <br>* '.lang('Existing Domain Importing').' <br>* '.lang('Get / Set Auto Renew Status').' <br>* '.lang('Get / Set DNS Records').' <br>* '.lang('Get / Set Nameserver Records').' <br>* '.lang('Get / Set Contact Information').' <br>\* '.lang('Get Registrar Lock'),
                                 'value'         => ''
                                 ),
-            /*T*/'Actions'/*/T*/ => array (
+            lang('Actions') => array (
                                 'type'          => 'hidden',
-                                'description'   => /*T*/'Current actions that are active for this plugin (when a domain isn\'t registered)'/*/T*/,
+                                'description'   => lang('Current actions that are active for this plugin (when a domain isn\'t registered)'),
                                 'value'         => 'Register'
                                 ),
-            /*T*/'Registered Actions'/*/T*/ => array (
+            lang('Registered Actions') => array (
                                 'type'          => 'hidden',
-                                'description'   => /*T*/'Current actions that are active for this plugin (when a domain is registered)'/*/T*/,
+                                'description'   => lang('Current actions that are active for this plugin (when a domain is registered)'),
                                 'value'         => 'Cancel',
                                 )
 
