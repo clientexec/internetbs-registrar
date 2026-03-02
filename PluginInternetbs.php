@@ -829,6 +829,7 @@ class PluginInternetbs extends RegistrarPlugin
             $commandParams[$contactType.'_PhoneNumber']  = $this->_validatePhone($params['RegistrantPhone'], $params['RegistrantCountry']);
             $commandParams[$contactType.'_Street']       = $params['RegistrantAddress1'];
             $commandParams[$contactType.'_City']         = $params['RegistrantCity'];
+            $commandParams[$contactType.'_State']        = $params['RegistrantStateProvince'];
             $commandParams[$contactType.'_CountryCode']  = $params['RegistrantCountry'];
             $commandParams[$contactType.'_PostalCode']   = $params['RegistrantPostalCode'];
             $commandParams[$contactType.'_Language']     = 'en'; // Do not know how to set it from params, so use a en by default
