@@ -1162,8 +1162,10 @@ class PluginInternetbs extends RegistrarPlugin
         $ch = curl_init();
         curl_setopt($ch, CURLOPT_URL, $commandUrl);
 
-        curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
-        curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, 0);
+        curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, true);
+        curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, 2);
+        $caPathOrFile = \Composer\CaBundle\CaBundle::getSystemCaRootBundlePath();
+        curl_setopt($ch, is_dir($caPathOrFile) ? CURLOPT_CAPATH : CURLOPT_CAINFO, $caPathOrFile);
 
         curl_setopt($ch, CURLOPT_HEADER, 0);
         curl_setopt($ch, CURLOPT_USERAGENT, "Internet.bs ClientExec plugin V2.6");
